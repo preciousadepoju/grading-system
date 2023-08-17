@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precious Grading Stystem</title>
+    
+    <link rel="stylesheet" href="/intro/gradingsystem/gradingsys.css" />
+</head>
+
+<body id="body">
+    <div id="section">
+        <h1 id="heading">GRADING SYSTEM</h1>
+        <div id="para">
+            <p>Know your grade here</p>
+        </div>
+        <div style="position: fixed">
+            <input type="text" id="text" placeholder="Enter you score" />
+            <button id="button" onclick="check()">Submit</button>
+        </div>
+        <div id="display" style="
+          text-align: center;
+          font-weight: 900;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: x-large;
+          color: rgb(0, 0, 0);
+        ">
+            Grade:
+        </div>
+        <p style="
+          margin-top: 167px;
+          text-align: center;
+          font-size: 7px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        ">
+            C O D E A D D I C T
+        </p>
+    </div>
+
+    <div class="rec">A</div>
+    <div class="rect">B</div>
+    <div class="recta">C</div>
+    <div class="rectan">D</div>
+    <div class="rectang">E</div>
+    <div class="rectangl">F</div>
+
+    <script>
+        function check() {
+            var userScore = Number(text.value);
+            var sound = new Audio("music/ayele");
+            var sound2 = new Audio("music/comedy.mp3");
+            var sound3 = new Audio("music/okaka.mp3");
+            var sound4 = new Audio("music/austine.mp3");
+            
+            if (userScore == " "){
+                display.innerHTML = " Enter your score"
+            } else if (userScore >= 0 && userScore < 40) {
+                display.innerHTML = "Fail🥱😂";
+                display.style.color = "red";
+                sound.play();
+            } else if (userScore >= 40 && userScore < 50) {
+                display.innerHTML = "Pass smh🙄😅";
+                display.style.color = "red";
+                sound2.play();
+            } else if (userScore >= 50 && userScore < 60) {
+                display.innerHTML = "Good🙂";
+                display.style.color = "black";
+                sound4.play()
+            } else if (userScore >= 60 && userScore < 70) {
+                display.innerHTML = "Very Good🥰";
+                display.style.color = "blue";
+            } else if (userScore >= 70 && userScore <= 100) {
+                display.innerHTML = "Excellent🤩";
+                display.style.color = "green";
+                sound3.play();
+            } else {
+                display.innerHTML = "Not recognized";
+            }
+        }
+    </script>
+</body>
+
+</html>
